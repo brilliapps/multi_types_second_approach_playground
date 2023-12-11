@@ -79,13 +79,15 @@ M wetyreyty4 = (String | int | List)
 // Type wetyreyty5 = String | int.setV('Helo') | List; //unexpected error see the definition
 Type wetyreyty5 = String |
     int['Helo'] |
-    List; // alternative for the above, int is to be a natural type with no need of casting to int So the outcome would be <Int<String<List>>>
+    List; // alternative for the above, int is to be a natural type with no need of casting to int
+//so the outcome would be <Int<String<List>>>
 M wetyreyty6 = (String |
     (int | int
       ..v = 'Helo') |
     List); // more awkward syntax
 typedef StringOrIntOrListOrNull = Str<
-    Int<List>>?; // it will naturally work as String, but also by comparison operator is compatible with all Str<Int<List>> objects. As you can see it's tricky
+    Int<List>>?; // it will naturally work as String, but also by comparison operator is compatible
+// with all Str<Int<List>> objects. As you can see it's tricky
 
 sfddsgg(Str<Int<List>> abc) {}
 
