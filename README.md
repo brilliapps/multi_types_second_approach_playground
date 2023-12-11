@@ -76,14 +76,14 @@ Type wetyreyty3 =
     String | int | List; // this should return Str<Int<List>> type;
 M wetyreyty4 = (String | int | List)
   ..v = 'Helo'; // with setting value - String/Str is natural type
-// Type wetyreyty5 = String | int.setV('Helo') | List; //unexpected error see the definition
+// Type wetyreyty5 = String | int.setV(15) | List; //unexpected error see the definition
 Type wetyreyty5 = String |
-    int['Helo'] |
+    int[15] |
     List; // alternative for the above, int is to be a natural type with no need of casting to int
 //so the outcome would be <Int<String<List>>>
 M wetyreyty6 = (String |
     (int | int
-      ..v = 'Helo') |
+      ..v = 15) |
     List); // more awkward syntax
 typedef StringOrIntOrListOrNull = Str<
     Int<List>>?; // it will naturally work as String, but also by comparison operator is compatible
