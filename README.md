@@ -43,7 +43,9 @@ extension type Int<T>(int t) implements int {
 }
 
 /// BTW: Int instance could have a stream attached and change it's value iternally each time an event arrives.
-/// TODO: SO I WOULD CALLED A VALUE TYPE OR VALUE TYPE SYNTAX (some other names, M, MultiType, MType LoadedType, PreciousType, Fragmented Type, NestedType (because of nested generics with top type "natural") whatever), THAT IS TYPE WITH VALUE BUT THE VALUE CAN BE OF ONE OF DECLARED TYPES BUT ALSO HAS THE FIRST TYPE "NATUAL" like Str<...... type is also String and
+/// TODO: SO I WOULD CALLED A VALUE TYPE OR VALUE TYPE SYNTAX (some other names, M, MultiType, MType LoadedType, PreciousType,
+/// Fragmented Type, NestedType (because of nested generics with top type "natural") whatever), THAT IS TYPE WITH VALUE
+/// BUT THE VALUE CAN BE OF ONE OF DECLARED TYPES BUT ALSO HAS THE FIRST TYPE "NATUAL" like Str<...... type is also String and
 /// Not to do too long syntax for null as a function param you can use Str<Int<List>>? or f.e. typedef StringOrIntOrListOrNull = Str<Int<List>>?
 /// Best Possibly StringOr<T>, intOr<T> (StrOr<T> Int...) with "but..." because FutureOr<T> means something different: It is Future<T> or <T> itself. however...
 /// Because the limitation that the first type in the syntax Str<... is the natural type (also Int<.... , SomeType<...
@@ -59,14 +61,17 @@ extension type Int<T>(int t) implements int {
 ///
 /// Summary:
 /// extension type new syntax sdk: '>=3.3.0-174.2.beta <4.0.0'
-/// The full code [https://github.com/brilliapps/multi_types_second_approach_playground/edit/main/README.md](https://github.com/brilliapps/multi_types_second_approach_playground/tree/main)
+/// The full code
+/// [https://github.com/brilliapps/multi_types_second_approach_playground/edit/main/README.md](https://github.com/brilliapps/multi_types_second_approach_playground/tree/main)
 /// It at it's bottom contains some older experimentation syntaxes.
 /// The real universal syntax might be Str<Int<List>> but an object may be created like Type wetyreyty3 = String | int | List
+/// So a function could only by like sfddsgg(Str<Int<List>> abc) {}
 /// All here is a stub, i try to deliver an idea, inspiration, it is early stage and probably will lead to nothing
 /// the implementation may be much different this is just to indicate what the current syntax seems to be capable of
 /// But people ask for a solution similar to union types, however i call it most often Multi Types.
 /// the code below always is to generate Str<Int<List>> type that could be used as a type hind of a function param where
-/// not tested but it is hoped that by access to "this" an Expando could be used to store values or additional data like typeexpando[this] = somedataobject;
+/// not tested but it is hoped that by access to "this" an Expando could be used to store values or additional data
+/// like f.e. SomeGloballyAceessibleClass.typeexpando[this] = somedataobject;
 Type wetyreyty3 =
     String | int | List; // this should return Str<Int<List>> type;
 M wetyreyty4 = (String | int | List)
