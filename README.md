@@ -2,7 +2,7 @@
 ```dart
 import 'package:flutter/material.dart';
 
-//it cannot be used because how you imagine int object like 10 but with this operator | like 10 | 12
+// [Edit: What?] it cannot be used because how you imagine int object like 10 but with this operator | like 10 | 12
 extension type M(Type t) implements Type {
   M operator |(Type other) {
     debugPrint('We are here1');
@@ -59,7 +59,7 @@ extension type Int<T>(int t) implements int {
 ///
 /// Summary:
 /// extension type new syntax sdk: '>=3.3.0-174.2.beta <4.0.0'
-/// The full code https://github.com/brilliapps/multi_types_second_approach_playground/edit/main/README.md
+/// The full code [https://github.com/brilliapps/multi_types_second_approach_playground/edit/main/README.md](https://github.com/brilliapps/multi_types_second_approach_playground/tree/main)
 /// It at it's the bottom contains some older experimentation syntaxes.
 /// The real universal syntax might be Str<Int<List>> but an object may be created like Type wetyreyty3 = String | int | List
 /// All here is a stub, i try to deliver an idea, inspiration, it is early stage and probably will lead to nothing
